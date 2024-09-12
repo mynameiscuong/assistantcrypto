@@ -1,4 +1,3 @@
-import React from'react';
 import axios from 'axios';
 import CoinInfo from '../components/CoinInfo';
 import HTMLReactParser from 'html-react-parser';
@@ -11,7 +10,7 @@ import { LinearProgress, makeStyles, Typography, Button } from "@material-ui/cor
 import {doc, setDoc} from '@firebase/firestore';
 import {db} from '../firebase';
 
-const CoinPage = () => {
+export default function CoinPage(){
     const {id} = useParams();
     const [coin, setCoin] = useState();
 
@@ -205,5 +204,3 @@ const CoinPage = () => {
         </div>
     )
 }
-
-export default CoinPage;
